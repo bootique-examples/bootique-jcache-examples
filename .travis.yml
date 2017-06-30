@@ -1,0 +1,11 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+branches:
+  only:
+    - master
+
+script: mvn clean javadoc:javadoc source:jar verify
+

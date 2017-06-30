@@ -1,0 +1,3 @@
+jcache:
+  configs:
+    - "hazelcast.xml"
