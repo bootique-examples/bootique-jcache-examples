@@ -40,7 +40,7 @@ public class DemoEhcacheCommand extends CommandWithMetadata {
 
         //put an entry...
         //CacheEntryCreatedListener fires afterwards
-        myCache2.put((long) 1, (long) 1);
+        myCache2.put(1L, 1L);
 
         return CommandOutcome.succeeded();
     }
