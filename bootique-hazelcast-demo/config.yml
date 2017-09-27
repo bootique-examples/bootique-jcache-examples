@@ -1,0 +1,4 @@
+jcache:
+  configs:
+    - "bootique-hazelcast-demo/hazelcast.xml"
+

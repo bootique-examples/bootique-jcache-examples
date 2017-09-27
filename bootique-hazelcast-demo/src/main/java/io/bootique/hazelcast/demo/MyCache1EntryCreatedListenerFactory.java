@@ -1,4 +1,4 @@
-package io.bootique.jcache.demo;
+package io.bootique.hazelcast.demo;
 
 import javax.cache.configuration.Factory;
 
