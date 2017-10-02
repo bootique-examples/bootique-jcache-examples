@@ -8,16 +8,16 @@ import io.bootique.meta.application.CommandMetadata;
 import javax.cache.Cache;
 import javax.cache.CacheManager;
 
-public class DemoCacheCommand extends CommandWithMetadata {
+public class DemoHazelcastCommand extends CommandWithMetadata {
 
     private Provider<CacheManager> cacheManager;
 
     @Inject
-    public DemoCacheCommand(Provider<CacheManager> cacheManager) {
-        super(CommandMetadata.builder(DemoCacheCommand.class)
+    public DemoHazelcastCommand(Provider<CacheManager> cacheManager) {
+        super(CommandMetadata.builder(DemoHazelcastCommand.class)
                 .name("demo")
                 .shortName('d')
-                .description("Simple command showing how to use JCache integration in an app.")
+                .description("Simple command showing how to use JCache in an app.")
                 .build());
 
         this.cacheManager = cacheManager;

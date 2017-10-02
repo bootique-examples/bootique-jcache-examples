@@ -3,7 +3,7 @@ import com.google.inject.Module;
 import io.bootique.BQCoreModule;
 import io.bootique.Bootique;
 import io.bootique.jcache.JCacheModule;
-import io.bootique.jcache.demo.MyCache2EntryListenerConfiguration;
+import io.bootique.hazelcast.demo.MyCache2EntryListenerConfiguration;
 
 import javax.cache.configuration.Configuration;
 import javax.cache.configuration.MutableConfiguration;
@@ -31,6 +31,6 @@ public class Application implements Module {
         //contribute the cache into BQ
         JCacheModule.extend(binder).setConfiguration("myCache2", programmaticCache);
 
-        BQCoreModule.extend(binder).addCommand(DemoCacheCommand.class);
+        BQCoreModule.extend(binder).addCommand(DemoHazelcastCommand.class);
     }
 }
