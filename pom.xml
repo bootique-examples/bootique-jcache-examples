@@ -21,6 +21,7 @@
     <modules>
         <module>bootique-ehcache-demo</module>
         <module>bootique-hazelcast-demo</module>
+        <module>bootique-caffeine-demo</module>
     </modules>
 
 </project>
