@@ -59,7 +59,7 @@ Such kind of cache configuration should be contributed into Bootique via extende
 JCacheModule.extend(binder).setConfiguration("myCache2", programmaticCache);
 ```
 * **declaratively** using appliaction.conf placed in resources is used in the demo:
-```json
+```hocon
 caffeine.jcache {
 
   myCache1 {
