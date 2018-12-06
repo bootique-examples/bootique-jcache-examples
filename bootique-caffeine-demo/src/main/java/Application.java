@@ -16,7 +16,12 @@ import java.util.concurrent.TimeUnit;
 public class Application  implements Module {
 
     public static void main(String[] args) {
-        Bootique.app(args).autoLoadModules().args("-d").module(Application.class).run();
+        Bootique.app(args)
+                .autoLoadModules()
+                .args("-d")
+                .module(Application.class)
+                .exec()
+                .exit();
     }
 
     @Override
