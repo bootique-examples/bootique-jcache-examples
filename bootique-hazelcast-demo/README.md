@@ -22,7 +22,7 @@ Here is how to build it:
 
 Check the options available in your app:
 ```bash
-java -jar bootique-hazelcast-demo/target/bootique-hazelcast-demo-1.0-SNAPSHOT.jar
+java -jar bootique-hazelcast-demo/target/bootique-hazelcast-demo-2.0.jar
 ```
 
 ```
@@ -91,7 +91,7 @@ jcache:
 ```
 Run the demo command:
 ```bash
-java -jar bootique-hazelcast-demo/target/bootique-hazelcast-demo-1.0-SNAPSHOT.jar --config=bootique-hazelcast-demo/config.yml --demo
+java -jar bootique-hazelcast-demo/target/bootique-hazelcast-demo-2.0.jar --config=bootique-hazelcast-demo/config.yml --demo
 ```
 Look through the log:
 ```

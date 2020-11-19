@@ -26,10 +26,10 @@ Here is how to build it:
 
 Run **bootique-ehcache-demo**:
 ```bash
-java -jar bootique-ehcache-demo/target/bootique-ehcache-demo-1.0-SNAPSHOT.jar --config=bootique-ehcache-demo/config.yml --demo
+java -jar bootique-ehcache-demo/target/bootique-ehcache-demo-2.0.jar --config=bootique-ehcache-demo/config.yml --demo
 ```
 Run **bootique-hazelcast-demo**:
 ```bash
-java -jar bootique-hazelcast-demo/target/bootique-hazelcast-demo-1.0-SNAPSHOT.jar --config=bootique-hazelcast-demo/config.yml --demo
+java -jar bootique-hazelcast-demo/target/bootique-hazelcast-demo-2.0.jar --config=bootique-hazelcast-demo/config.yml --demo
 ```
 For additional details, please, take a peek at README.md of each of these examples.

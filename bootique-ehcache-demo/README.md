@@ -22,7 +22,7 @@ Here is how to build it:
 
 Check the options available in your app:
 ```bash
-java -jar bootique-ehcache-demo/target/bootique-ehcache-demo-1.0-SNAPSHOT.jar
+java -jar bootique-ehcache-demo/target/bootique-ehcache-demo-2.0.jar
 ```
 
 ```
@@ -85,7 +85,7 @@ jcache:
 ```
 Run the demo command:
 ```bash
-java -jar bootique-ehcache-demo/target/bootique-ehcache-demo-1.0-SNAPSHOT.jar --config=bootique-ehcache-demo/config.yml --demo
+java -jar bootique-ehcache-demo/target/bootique-ehcache-demo-2.0.jar --config=bootique-ehcache-demo/config.yml --demo
 ```
 Look through the log:
 ```

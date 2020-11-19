@@ -1,5 +1,3 @@
-import com.google.inject.Inject;
-import com.google.inject.Provider;
 import io.bootique.cli.Cli;
 import io.bootique.command.CommandOutcome;
 import io.bootique.command.CommandWithMetadata;
@@ -7,6 +5,8 @@ import io.bootique.meta.application.CommandMetadata;
 
 import javax.cache.Cache;
 import javax.cache.CacheManager;
+import javax.inject.Inject;
+import javax.inject.Provider;
 
 public class DemoEhcacheCommand extends CommandWithMetadata {
 

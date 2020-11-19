@@ -1,7 +1,7 @@
-import com.google.inject.Binder;
-import com.google.inject.Module;
 import io.bootique.BQCoreModule;
+import io.bootique.BaseModule;
 import io.bootique.Bootique;
+import io.bootique.di.Binder;
 import io.bootique.ehcache.demo.MyCache2EntryListenerConfiguration;
 import io.bootique.jcache.JCacheModule;
 
@@ -13,7 +13,7 @@ import javax.cache.expiry.Duration;
 import javax.cache.expiry.ExpiryPolicy;
 import java.util.concurrent.TimeUnit;
 
-public class Application implements Module {
+public class Application extends BaseModule {
 
     public static void main(String[] args) {
         Bootique.app(args)

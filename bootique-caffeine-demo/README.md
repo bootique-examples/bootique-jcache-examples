@@ -22,7 +22,7 @@ Here is how to build it:
 
 Check the options available in your app:
 ```bash
-java -jar bootique-caffeine-demo/target/bootique-caffeine-demo-1.0-SNAPSHOT.jar
+java -jar bootique-caffeine-demo/target/bootique-caffeine-demo-2.0.jar
 ```
 
 ```
@@ -82,7 +82,7 @@ caffeine.jcache {
 
 Run the demo command:
 ```bash
-java -jar bootique-caffeine-demo/target/bootique-caffeine-demo-1.0-SNAPSHOT.jar
+java -jar bootique-caffeine-demo/target/bootique-caffeine-demo-2.0.jar
 ```
 Look through the log:
 ```
