@@ -1,4 +1,4 @@
-[![verify](https://github.com/bootique-examples/bootique-jcache-demo/actions/workflows/verify.yml/badge.svg)](https://github.com/bootique-examples/bootique-jcache-demo/actions/workflows/verify.yml)
+[![Build Status](https://travis-ci.org/bootique-examples/bootique-jcache-demo.svg)](https://travis-ci.org/bootique-examples/bootique-jcache-demo)
 # bootique-jcache-demo
 
 * [bootique-ehcache-demo](https://github.com/bootique-examples/bootique-jcache-demo/tree/master/bootique-ehcache-demo) -
