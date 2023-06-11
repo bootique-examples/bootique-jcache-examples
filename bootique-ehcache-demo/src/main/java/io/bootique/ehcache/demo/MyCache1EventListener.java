@@ -9,7 +9,7 @@ public class MyCache1EventListener implements CacheEventListener<String, Integer
     private static final Logger logger = LoggerFactory.getLogger(MyCache1EventListener.class);
 
     @Override
-    public void onEvent(CacheEvent<String, Integer> cacheEvent) {
-        logger.info("Event: " + cacheEvent.getType() + " Key: " + cacheEvent.getKey() + " old value: " + cacheEvent.getOldValue() + " new value: " + cacheEvent.getNewValue());
+    public void onEvent(CacheEvent<? extends String, ? extends Integer> event) {
+        logger.info("Event: " + event.getType() + " Key: " + event.getKey() + " old value: " + event.getOldValue() + " new value: " + event.getNewValue());
     }
 }
