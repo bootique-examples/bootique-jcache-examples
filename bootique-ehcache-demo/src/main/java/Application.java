@@ -1,4 +1,5 @@
 import io.bootique.BQCoreModule;
+import io.bootique.BaseModule;
 import io.bootique.Bootique;
 import io.bootique.di.BQModule;
 import io.bootique.di.Binder;
@@ -13,7 +14,7 @@ import javax.cache.expiry.Duration;
 import javax.cache.expiry.ExpiryPolicy;
 import java.util.concurrent.TimeUnit;
 
-public class Application implements BQModule {
+public class Application extends BaseModule {
 
     public static void main(String[] args) {
         Bootique.app(args)
@@ -32,7 +33,7 @@ public class Application implements BQModule {
                 .setExpiryPolicyFactory(_100ms)
                 .addCacheEntryListenerConfiguration(new MyCache2EntryListenerConfiguration());
 
-        //contribute the cache into BQ
+        // contribute the cache into BQ
         JCacheModule.extend(binder).setConfiguration("myCache2", myCache2);
 
         BQCoreModule.extend(binder).addCommand(DemoEhcacheCommand.class);
