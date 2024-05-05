@@ -12,11 +12,11 @@
 
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
-
         <bootique.version>3.0-M4</bootique.version>
+        <caffeine.version>3.1.8</caffeine.version>
+
         <main.class>io.bootique.examples.jcache.caffeine.App</main.class>
     </properties>
-
 
     <dependencyManagement>
         <dependencies>
@@ -26,6 +26,11 @@
                 <version>${bootique.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.github.ben-manes.caffeine</groupId>
+                <artifactId>jcache</artifactId>
+                <version>${caffeine.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -42,7 +47,6 @@
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>
             <artifactId>jcache</artifactId>
-            <version>2.6.2</version>
         </dependency>
     </dependencies>
 
