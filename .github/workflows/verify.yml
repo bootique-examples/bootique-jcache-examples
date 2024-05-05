@@ -13,7 +13,8 @@ jobs:
       - name: Set up JDK...
         uses: actions/setup-java@v4
         with:
-          java-version: 11
+          # While BQ 3 works with Java 11, Hazelcast 5.x requires Java 17
+          java-version: 17
           distribution: 'temurin'
           cache: 'maven'
 
