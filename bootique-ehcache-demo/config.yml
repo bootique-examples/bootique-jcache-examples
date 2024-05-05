@@ -1,3 +1,0 @@
-jcache:
-  configs:
-    - "bootique-ehcache-demo/ehcache.xml"

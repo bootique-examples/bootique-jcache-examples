@@ -1,9 +1,9 @@
+package io.bootique.examples.jcache.ehcache;
+
 import io.bootique.BQCoreModule;
-import io.bootique.BaseModule;
+import io.bootique.BQModule;
 import io.bootique.Bootique;
-import io.bootique.di.BQModule;
 import io.bootique.di.Binder;
-import io.bootique.ehcache.demo.MyCache2EntryListenerConfiguration;
 import io.bootique.jcache.JCacheModule;
 
 import javax.cache.configuration.Configuration;
@@ -14,12 +14,12 @@ import javax.cache.expiry.Duration;
 import javax.cache.expiry.ExpiryPolicy;
 import java.util.concurrent.TimeUnit;
 
-public class Application extends BaseModule {
+public class App implements BQModule {
 
     public static void main(String[] args) {
         Bootique.app(args)
                 .autoLoadModules()
-                .module(Application.class)
+                .module(App.class)
                 .exec()
                 .exit();
     }
@@ -27,15 +27,16 @@ public class Application extends BaseModule {
     @Override
     public void configure(Binder binder) {
 
+        BQCoreModule.extend(binder).addCommand(ExploreCacheCommand.class);
+
+        // create cache configuration in the code
         Factory<ExpiryPolicy> _100ms = CreatedExpiryPolicy.factoryOf(new Duration(TimeUnit.MILLISECONDS, 100));
         Configuration<Long, Long> myCache2 = new MutableConfiguration<Long, Long>()
                 .setTypes(Long.class, Long.class)
                 .setExpiryPolicyFactory(_100ms)
-                .addCacheEntryListenerConfiguration(new MyCache2EntryListenerConfiguration());
+                .addCacheEntryListenerConfiguration(new JCacheEntryListenerConfig());
 
-        // contribute the cache into BQ
-        JCacheModule.extend(binder).setConfiguration("myCache2", myCache2);
-
-        BQCoreModule.extend(binder).addCommand(DemoEhcacheCommand.class);
+        // add the Cache to Bootique
+        JCacheModule.extend(binder).setConfiguration("cache1", myCache2);
     }
 }

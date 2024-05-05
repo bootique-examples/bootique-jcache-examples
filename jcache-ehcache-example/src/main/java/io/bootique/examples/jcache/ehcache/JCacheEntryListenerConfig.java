@@ -1,4 +1,4 @@
-package io.bootique.ehcache.demo;
+package io.bootique.examples.jcache.ehcache;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,16 +9,20 @@ import javax.cache.event.CacheEntryCreatedListener;
 import javax.cache.event.CacheEntryEventFilter;
 import javax.cache.event.CacheEntryListener;
 
-public class MyCache2EntryListenerConfiguration implements CacheEntryListenerConfiguration<Long, Long> {
+/**
+ *  Creates listeners for JCache CacheEntryEvents
+ */
+public class JCacheEntryListenerConfig implements CacheEntryListenerConfiguration<Long, Long> {
 
-    private static final Logger logger = LoggerFactory.getLogger(MyCache2EntryListenerConfiguration.class);
+    static final Logger LOGGER = LoggerFactory.getLogger(JCacheEntryListenerConfig.class);
 
     @Override
     public Factory<CacheEntryListener<? super Long, ? super Long>> getCacheEntryListenerFactory() {
-        return (Factory<CacheEntryListener<? super Long, ? super Long>>) () ->
-                (CacheEntryCreatedListener<Long, Long>) cacheEntryEvents -> cacheEntryEvents.forEach((event) -> {
-                    logger.info("an entry k: " + event.getKey() + ", v: " + event.getValue() + " is added to myCache2");
-                });
+        return () -> (CacheEntryCreatedListener<Long, Long>) events -> events.forEach(event -> {
+            LOGGER.info("JCache 'create' event...  Key: {}, new value: {}",
+                    event.getKey(),
+                    event.getValue());
+        });
     }
 
     @Override

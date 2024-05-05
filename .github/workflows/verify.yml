@@ -17,5 +17,11 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
-      - name: Build and test...
-        run: mvn -ntp clean verify
+      - name: Build and test Caffeine...
+        run: cd jcache-caffeine-example && mvn -ntp clean verify
+
+      - name: Build and test Ehcache...
+        run: cd jcache-ehcache-example && mvn -ntp clean verify
+
+      - name: Build and test Hazelcast...
+        run: cd jcache-hazelcast-example && mvn -ntp clean verify
