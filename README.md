@@ -13,7 +13,7 @@ example code for different versions of Bootique:
 
 Make sure you have the following installed on your machine:
 
-* Java 11 or newer
+* Java 11 or newer (Hazelcast example requires Java 17 or newer)
 * Maven
 
 and then checkout the examples code, and proceed to individual examples:
