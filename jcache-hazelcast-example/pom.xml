@@ -12,8 +12,9 @@
 
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
-
         <bootique.version>3.0-M4</bootique.version>
+        <hazelcast.version>5.4.0</hazelcast.version>
+
         <main.class>io.bootique.examples.jcache.hazelcast.App</main.class>
     </properties>
 
@@ -25,6 +26,11 @@
                 <version>${bootique.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.hazelcast</groupId>
+                <artifactId>hazelcast</artifactId>
+                <version>${hazelcast.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -41,7 +47,6 @@
         <dependency>
             <groupId>com.hazelcast</groupId>
             <artifactId>hazelcast</artifactId>
-            <version>5.3.5</version>
         </dependency>
     </dependencies>
 
