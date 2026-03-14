@@ -13,7 +13,7 @@
     <properties>
         <!-- While BQ 3 works with Java 11, Hazelcast 5.x requires Java 17 -->
         <maven.compiler.release>17</maven.compiler.release>
-        <bootique.version>3.0-RC1</bootique.version>
+        <bootique.version>3.0</bootique.version>
         <hazelcast.version>5.4.0</hazelcast.version>
 
         <main.class>io.bootique.examples.jcache.hazelcast.App</main.class>
