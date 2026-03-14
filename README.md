@@ -1,10 +1,11 @@
 [![build test](https://github.com/bootique-examples/bootique-jcache-examples/actions/workflows/verify.yml/badge.svg)](https://github.com/bootique-examples/bootique-jcache-examples/actions/workflows/verify.yml)
 
-# Bootique 3.x Jersey Examples
+# Bootique 4.x JCache Examples
 
 Provides examples of Bootique integration with JCache and various cache provdiers. Different Git branches contain 
 example code for different versions of Bootique:
 
+* [4.x](https://github.com/bootique-examples/bootique-jcache-examples/tree/4.x)
 * [3.x](https://github.com/bootique-examples/bootique-jcache-examples/tree/3.x)
 * [2.x](https://github.com/bootique-examples/bootique-jcache-examples/tree/2.x)
 * [1.x](https://github.com/bootique-examples/bootique-jcache-examples/tree/1.x)
@@ -13,7 +14,7 @@ example code for different versions of Bootique:
 
 Make sure you have the following installed on your machine:
 
-* Java 11 or newer (Hazelcast example requires Java 17 or newer)
+* Java 21 or newer
 * Maven
 
 and then checkout the examples code, and proceed to individual examples:

@@ -7,13 +7,12 @@
 
     <groupId>io.bootique.examples.jcache</groupId>
     <artifactId>jcache-hazelcast-example</artifactId>
-    <version>3.0</version>
+    <version>4.0</version>
     <packaging>jar</packaging>
 
     <properties>
-        <!-- While BQ 3 works with Java 11, Hazelcast 5.x requires Java 17 -->
-        <maven.compiler.release>17</maven.compiler.release>
-        <bootique.version>3.0</bootique.version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <bootique.version>4.0-M3</bootique.version>
         <hazelcast.version>5.4.0</hazelcast.version>
 
         <main.class>io.bootique.examples.jcache.hazelcast.App</main.class>

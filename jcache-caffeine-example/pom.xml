@@ -7,12 +7,12 @@
 
     <groupId>io.bootique.examples.jcache</groupId>
     <artifactId>jcache-caffeine-example</artifactId>
-    <version>3.0</version>
+    <version>4.0</version>
     <packaging>jar</packaging>
 
     <properties>
-        <maven.compiler.release>11</maven.compiler.release>
-        <bootique.version>3.0</bootique.version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <bootique.version>4.0-M3</bootique.version>
         <caffeine.version>3.1.8</caffeine.version>
 
         <main.class>io.bootique.examples.jcache.caffeine.App</main.class>
