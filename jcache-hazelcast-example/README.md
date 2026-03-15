@@ -1,4 +1,4 @@
-# Bootique 3.x JCache with Caffeine Example
+# Bootique 4.x JCache with Hazelcast Example
 
 This is an example Bootique use of JCache with Hazelcast provider.
 
@@ -14,13 +14,13 @@ mvn clean package
 
 Check for available commands
 ```
-java -jar target/jcache-hazelcast-example-3.0.jar
+java -jar target/jcache-hazelcast-example-4.0.jar
 ```
 
 Run `-e` (`--explore-cache`) command. It will access the cache defined in the code, but also another cache defined in
 `hazelcast.xml`, the Hazelcast default config file:
 
 ```
-java -jar target/jcache-hazelcast-example-3.0.jar -e
+java -jar target/jcache-hazelcast-example-4.0.jar -e
 ```
 
